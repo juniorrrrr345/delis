@@ -53,7 +53,7 @@ CLOUDFLARE_R2_BUCKET_NAME=boutique-images
 CLOUDFLARE_R2_PUBLIC_URL=https://pub-b38679a01a274648827751df94818418.r2.dev
 
 # Admin Panel
-ADMIN_PASSWORD=caliwhite_admin_2024
+ADMIN_PASSWORD=votre_nouveau_mot_de_passe
 ```
 
 ## 📋 ÉTAPES SUIVANTES POUR DÉPLOIEMENT

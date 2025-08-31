@@ -28,7 +28,7 @@ CLOUDFLARE_R2_ACCESS_KEY_ID=82WsPNjX-j0UqZIGAny8b0uEehcHd0X3zMKNIKIN
 CLOUDFLARE_R2_SECRET_ACCESS_KEY=28230e200a3b71e5374e569f8a297eba9aa3fe2e1097fdf26e5d9e340ded709d
 CLOUDFLARE_R2_BUCKET_NAME=boutique-images
 CLOUDFLARE_R2_PUBLIC_URL=https://pub-b38679a01a274648827751df94818418.r2.dev
-ADMIN_PASSWORD=caliwhite_admin_2024
+ADMIN_PASSWORD=votre_nouveau_mot_de_passe
 ```
 
 ## 🎯 PRÊT POUR DÉPLOIEMENT
@@ -38,7 +38,7 @@ ADMIN_PASSWORD=caliwhite_admin_2024
 3. **Import Vercel** depuis GitHub
 4. **Deploy** - Build garanti ✅
 
-**Admin** : `/admin` avec mot de passe `caliwhite_admin_2024`
+**Admin** : `/admin` avec mot de passe `votre_nouveau_mot_de_passe`
 
 ---
 
