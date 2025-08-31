@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 // Configuration Cloudflare D1 hardcodée
 const CLOUDFLARE_CONFIG = {
   accountId: '7979421604bd07b3bd34d3ed96222512',
-  databaseId: 'c2f265db-7c5d-4f33-a5dd-f84c602a013d',
+  databaseId: '19ee81cc-91c0-4cfc-8cbe-dc67d8675e37',
   apiToken: 'ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW'
 };
 
@@ -45,16 +45,16 @@ export async function GET(
       
       switch (params.slug) {
         case 'info':
-          defaultTitle = 'À propos d\'MEXICAIN';
-          defaultContent = 'Bienvenue chez MEXICAIN - Votre boutique premium de produits d\'exception.';
+          defaultTitle = 'À propos d\'CALIWHITE';
+          defaultContent = 'Bienvenue chez CALIWHITE - Votre boutique premium de produits d\'exception.';
           break;
         case 'contact':
-          defaultTitle = 'Contact MEXICAIN';
-          defaultContent = 'Contactez-nous pour toute question concernant nos produits MEXICAIN.';
+          defaultTitle = 'Contact CALIWHITE';
+          defaultContent = 'Contactez-nous pour toute question concernant nos produits CALIWHITE.';
           break;
         default:
-          defaultTitle = 'Page MEXICAIN';
-          defaultContent = 'Contenu de la page MEXICAIN.';
+          defaultTitle = 'Page CALIWHITE';
+          defaultContent = 'Contenu de la page CALIWHITE.';
       }
       
       const defaultPage = {
