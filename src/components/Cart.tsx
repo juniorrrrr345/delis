@@ -71,18 +71,27 @@ export default function Cart() {
     // Encoder le message pour l'URL
     const encodedMessage = encodeURIComponent(message);
     
-    // Construire l'URL selon le type de lien
-    let finalUrl = orderLink;
+    // Construire l'URL selon le type de lien (inclure les détails quand possible)
+    const link = orderLink || '#';
+    const lower = link.toLowerCase();
+    let finalUrl = link;
     
-    if (orderLink.includes('wa.me')) {
-      // WhatsApp : ajouter le message
-      finalUrl = `${orderLink}?text=${encodedMessage}`;
-    } else if (orderLink.includes('t.me')) {
-      // Telegram : ouvrir le chat
-      finalUrl = orderLink;
+    if (lower.includes('wa.me') || lower.includes('whatsapp.com')) {
+      // WhatsApp: ajouter le message (gère wa.me et api.whatsapp.com)
+      const separator = link.includes('?') ? '&' : '?';
+      finalUrl = `${link}${separator}text=${encodedMessage}`;
+    } else if (lower.includes('t.me') || lower.includes('telegram.me')) {
+      // Telegram: utiliser le partage universel avec message
+      const baseShare = 'https://t.me/share/url';
+      const urlParam = encodeURIComponent(window.location.origin);
+      finalUrl = `${baseShare}?url=${urlParam}&text=${encodedMessage}`;
+    } else if (lower.startsWith('mailto:')) {
+      // Email: inclure le message dans le corps
+      const separator = link.includes('?') ? '&' : '?';
+      finalUrl = `${link}${separator}subject=${encodeURIComponent('Commande DELIS FOOD MARKET')}&body=${encodedMessage}`;
     } else {
-      // Autre lien : ouvrir tel quel
-      finalUrl = orderLink;
+      // Autres liens: ouvrir tel quel
+      finalUrl = link;
     }
     
     console.log('📱 Ouverture lien commande:', finalUrl);
