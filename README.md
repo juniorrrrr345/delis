@@ -1,114 +1,132 @@
-# 🛒 DELIS FOOD MARKET
+# �k DELIS FOOD MARKET
 
-Une application e-commerce moderne pour produits frais et de qualité, développée avec React, TypeScript et l'infrastructure Cloudflare.
+**Boutique e-commerce moderne pour produits frais et de qualité**
 
-## 🚀 Déploiement rapide
+## 🖋Caractéristiques
 
-### Prérequis
-- Node.js 18+
-- Compte Cloudflare avec API token
+- 🛒 **Boutique en ligne** complète avec catalogue produits
+- 📱 **Design responsive** optimisé mobile et desktop
+- ☴ｮ **Cloudflare D1** pour la base de données distribuée
+- �<￾ **Cloudflare R2** pour le stockage des médias
+- 📲 **Commandes WhatsApp** intégrées (+33123456789)
+- 🕝 **Recherche et filtres** avancés
+- ⚡ **Next.js 14* avec App Router
+- 🎨 **Tailwind CSS** avec composants modernes
 
-### Installation
+## 🚀 Déploiement Vercel
 
-1. **Cloner le repository**
+### 1. Importation
 ```bash
-git clone https://github.com/juniorrrrr345/delis.git
-cd delis
+# Sur vercel.com
+Import Git Repository ‒ https://github.com/juniorrrrr345/delis
 ```
 
-2. **Installer les dépendances**
+### 2. Variables d'environnement (optionnelles)
 ```bash
-npm install
+CLOUDFLARE_ACCOUNT_ID=7979421604bd07b3bd34d3ed96222512
+CLOUDFLARE_API_TOKEN=ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW
+CLOUDFLARE_DATABASE_ID=b52bc539-a06c-4c32-9569-0ea917199a6b
 ```
 
-3. **Configuration automatique**
-```bash
-npm run setup
-```
+### 3. Déploiement
+- Cliquez **"Deploy"** → Vercel détecte automatiquement Next.js
+- **URL finale** : https://delis-xxxxx.vercel.app
 
-4. **Démarrer en développement**
-```bash
-npm run dev
-```
+## 💾  Base de données
 
-## 🏗️ Architecture
+### Cloudflare D1 (UUID: b52bc539-a06c-4c32-9569-0ea917199a6b)
+- **Categories** : Organisation des produits
+- **Products** : Catalogue complet
+- **Farms** : Producteurs et fermes
+- **Settings** : Configuration de la boutique
+- **Social Links** : Réseaux sociaux
 
-- **Frontend**: React 19 + TypeScript + Tailwind CSS
-- **Backend**: Express.js + Cloudflare D1 (SQLite)
-- **Storage**: Cloudflare R2 pour les médias
-- **Déploiement**: Vercel
+## 🛄￾ Technologies
 
-## 📱 Fonctionnalités
+- **Framework** : Next.js 14 avec App Router
+- **UI** : Tailwind CSS + Radix UI
+- **Base de données** : Cloudflare D1 (SQLite distribuée)
+- **Stockage** : Cloudflare R2 pour les médias
+- **Déploiement** : Vercel avec GitHub
+- **Commandes** : WhatsApp Business API
 
-- ✅ Catalogue de produits avec recherche et filtres
-- ✅ Commandes via WhatsApp
-- ✅ Interface responsive
-- ✅ Gestion des catégories
-- ✅ Contact et informations
-
-## 🔧 Configuration Cloudflare
-
-### Base de données D1
-- **Nom**: DELIS FOOD MARKET
-- **UUID**: `b52bc539-a06c-4c32-9569-0ea917199a6b`
-- **Tables**: categories, products, farms, settings, social_links, pages
-
-### R2 Storage
-- **Bucket**: boutique-images
-- **URL publique**: https://pub-b38679a01a274648827751df94818418.r2.dev
-
-## 🚀 Déploiement sur Vercel
-
-1. **Connecter à GitHub**
-   - Pusher le code sur https://github.com/juniorrrrr345/delis.git
-
-2. **Déployer sur Vercel**
-   - Importer le projet depuis GitHub
-   - Configuration automatique (Vite détecté)
-   - Variables d'environnement déjà configurées dans `vercel.json`
-
-3. **URL finale**
-   - https://delisfoodmarket.vercel.app
-
-## 📝 Scripts disponibles
-
-```bash
-npm run dev        # Serveur de développement
-npm run build      # Build de production
-npm run preview    # Aperçu de production
-npm run setup      # Configuration complète
-npm run create-db  # Recréer la base D1
-```
-
-## 🛠️ Structure du projet
+## 📁 Structure
 
 ```
 /
-├── src/
-│   ├── components/ui/    # Composants UI
-│   ├── pages/           # Pages React
-│   ├── lib/             # Configuration
-│   └── hooks/           # Hooks personnalisés
-├── shared/
-│   └── schema.ts        # Schémas de données
-├── scripts/
-│   ├── create-d1-database.js
-│   └── setup-delis-food-market.sh
-└── server/
-    └── index.ts         # API Express
+├┬┬ app/                    # Pages Next.js (App Router)
+│   ├┬┬ page.tsx          # Page d'accueil
+│   ├┬┬ layout.tsx         # Layout principal
+│   └┬┬ globals.css        # Styles globaux
+│├┬┬ components/            # Composants React
+│   └┬┬ DelisFoodMarket.tsx # Composant principal
+│├┬┬ src/lib/              # Utilitaires
+│  ├┬┬ cloudflare-d1.ts  # Client D1
+│  └┬┬ cloudflare-r2.ts  # Client R2
+│├┬┬ package.json          # Dépendances Next.js
+│├┬┬ next.config.js        # Configuration Next.js
+│├┬┬ vercel.json          # Configuration Vercel
+│└┬┬ tailwind.config.js   # Configuration Tailwind
 ```
 
-## 🌐 API Endpoints
+## 🎯 Fonctionnalités
 
-- `GET /api/health` - Status de l'application
-- `GET /api/products` - Liste des produits
-- `GET /api/settings` - Configuration boutique
+### Frontend
+- ✅ Catalogue produits avec images
+- ✅ Recherche en temps réel
+- ✅ Filtres par catégories
+- ✅ Panier d'achat dynamique
+- ✅ Interface responsive
+- ✅ Animations et transitions
 
-## 💬 Contact
+### Backend
+- ✅ API Cloudflare D1 intégrée
+- ✅ Gestion des produits
+- ✅ Système de catégories
+- ✅ Configuration boutique
 
-- WhatsApp: +33 1 23 45 67 89
-- Email: contact@delisfoodmarket.fr
+### Commandes
+- ✅ Intégration WhatsApp (+33123456789)
+- ✅ Édération automatique des commandes
+- ✅ Calcul total automatique
+
+## 🔞 Éveloppement Local
+
+```bash
+# Développement
+npm run dev
+
+# Build production
+npm run build
+
+# Démarrage production
+npm start
+```
+
+## 📗 PuatsApp Business
+
+**Numéro** : +33123456789
+
+Les commandes sont automatiquement formatées et envoyées via WhatsApp avec :
+- Liste des produits sélectionnés
+- Prix individuels et total
+- Message personnalisé
+
+## 🌖��� URLs
+
+- **Production** : https://delis-xxxxx.vercel.app (après déploiement)
+- **Repository** : https://github.com/juniorrrrr345/delis
+- **Développement** : http://localhost:3000
+
+## ⦉ Performance
+
+- **SSR** : Rendu côté serveur avec Next.js
+- **CDN** : Distribution globale via Vercel Edge
+- **Database** : Cloudflare D1 distribuée mondialement
+- **Images** : Optimisation automatique Next.js + Cloudflare R2
 
 ---
 
-**Développé avec ❤️ pour DELIS FOOD MARKET**
+**�� DELIS FOOD MARKET est prêt pour le déploiement Vercel !**
+
+*application complète avec base de données Cloudflare D1 et intégration WhatsApp*
