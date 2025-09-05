@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 // Configuration Cloudflare D1 hardcodée
 const CLOUDFLARE_CONFIG = {
   accountId: '7979421604bd07b3bd34d3ed96222512',
-  databaseId: '19ee81cc-91c0-4cfc-8cbe-dc67d8675e37',
+  databaseId: 'b52bc539-a06c-4c32-9569-0ea917199a6b',
   apiToken: 'ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW'
 };
 
@@ -45,16 +45,16 @@ export async function GET(
       
       switch (params.slug) {
         case 'info':
-          defaultTitle = 'À propos d\'CALIWHITE';
-          defaultContent = 'Bienvenue chez CALIWHITE - Votre boutique premium de produits d\'exception.';
+          defaultTitle = 'À propos d\'DELIS FOOD MARKET';
+          defaultContent = 'Bienvenue chez DELIS FOOD MARKET - Votre boutique premium de produits d\'exception.';
           break;
         case 'contact':
-          defaultTitle = 'Contact CALIWHITE';
-          defaultContent = 'Contactez-nous pour toute question concernant nos produits CALIWHITE.';
+          defaultTitle = 'Contact DELIS FOOD MARKET';
+          defaultContent = 'Contactez-nous pour toute question concernant nos produits DELIS FOOD MARKET.';
           break;
         default:
-          defaultTitle = 'Page CALIWHITE';
-          defaultContent = 'Contenu de la page CALIWHITE.';
+          defaultTitle = 'Page DELIS FOOD MARKET';
+          defaultContent = 'Contenu de la page DELIS FOOD MARKET.';
       }
       
       const defaultPage = {

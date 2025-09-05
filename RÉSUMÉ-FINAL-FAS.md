@@ -8,7 +8,7 @@
 - ✅ **Prêt pour Vercel** en 1 clic
 
 ### 🏪 **PERSONNALISATION FAS**
-- ✅ **Nom partout :** FAS remplace CALITEK dans tous les fichiers
+- ✅ **Nom partout :** FAS remplace DELIS FOOD MARKET dans tous les fichiers
 - ✅ **Titre navigateur :** "FAS - Boutique en ligne"
 - ✅ **Panel admin :** "FAS Panel d'Administration"
 - ✅ **Page chargement :** "FAS INDUSTRY"

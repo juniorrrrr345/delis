@@ -1,10 +1,10 @@
-# 🚀 CALIWHITE - INFORMATIONS DE DÉPLOIEMENT
+# 🚀 DELIS FOOD MARKET - INFORMATIONS DE DÉPLOIEMENT
 
-## 📋 DONNÉES CALIWHITE CONFIGURÉES
+## 📋 DONNÉES DELIS FOOD MARKET CONFIGURÉES
 
 ### Base D1 Cloudflare
-- **Nom de la base** : CALIWHITE
-- **UUID D1** : `19ee81cc-91c0-4cfc-8cbe-dc67d8675e37`
+- **Nom de la base** : DELIS FOOD MARKET
+- **UUID D1** : `b52bc539-a06c-4c32-9569-0ea917199a6b`
 - **Account ID** : `7979421604bd07b3bd34d3ed96222512`
 - **API Token** : `ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW`
 
@@ -26,7 +26,7 @@
 - ✅ **1 farm** migrée (teste)
 - ✅ **3 liens sociaux** migrés
 - ✅ **1 produit** migré avec média R2
-- ✅ **Settings CALIWHITE** configurés
+- ✅ **Settings DELIS FOOD MARKET** configurés
 
 ### Médias migrés
 - ✅ **1 image** Cloudinary → R2 migrée
@@ -41,9 +41,9 @@
 ## 🌐 VARIABLES VERCEL
 
 ```env
-# Cloudflare D1 Database (CALIWHITE)
+# Cloudflare D1 Database (DELIS FOOD MARKET)
 CLOUDFLARE_ACCOUNT_ID=7979421604bd07b3bd34d3ed96222512
-CLOUDFLARE_DATABASE_ID=19ee81cc-91c0-4cfc-8cbe-dc67d8675e37
+CLOUDFLARE_DATABASE_ID=b52bc539-a06c-4c32-9569-0ea917199a6b
 CLOUDFLARE_API_TOKEN=ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW
 
 # Cloudflare R2 Storage
@@ -60,7 +60,7 @@ ADMIN_PASSWORD=votre_nouveau_mot_de_passe
 
 1. **Créer repository GitHub** :
    ```bash
-   git remote add origin https://github.com/USERNAME/CALIWHITE.git
+   git remote add origin https://github.com/USERNAME/DELIS FOOD MARKET.git
    git push -u origin main
    ```
 
@@ -88,9 +88,9 @@ ADMIN_PASSWORD=votre_nouveau_mot_de_passe
 - ✅ **Affichage médias** : `<img>` et `<video>` natifs
 - ✅ **Messages admin** : "Sauvegardé avec succès" fonctionnels
 - ✅ **Credentials hardcodés** : Évite les erreurs Vercel
-- ✅ **UUID D1 mis à jour** : Nouvelle base CALIWHITE
-- ✅ **Nom boutique** : CALIWHITE partout
+- ✅ **UUID D1 mis à jour** : Nouvelle base DELIS FOOD MARKET
+- ✅ **Nom boutique** : DELIS FOOD MARKET partout
 
 ---
 
-**🎉 CALIWHITE EST PRÊT POUR LE DÉPLOIEMENT !**
+**🎉 DELIS FOOD MARKET EST PRÊT POUR LE DÉPLOIEMENT !**

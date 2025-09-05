@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de duplication automatique CALITEK optimisé
+# Script de duplication automatique DELIS FOOD MARKET optimisé
 # Usage: ./SCRIPT_DUPLICATION_AUTOMATIQUE.sh nom-nouvelle-boutique
 
 set -e
@@ -15,7 +15,7 @@ BOUTIQUE_NAME=$1
 CLOUDFLARE_ACCOUNT_ID="7979421604bd07b3bd34d3ed96222512"
 CLOUDFLARE_API_TOKEN="ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW"
 
-echo "🚀 Duplication CALITEK optimisée..."
+echo "🚀 Duplication DELIS FOOD MARKET optimisée..."
 echo "📦 Nom: $BOUTIQUE_NAME"
 echo "🎯 Toutes les optimisations incluses !"
 echo ""
@@ -38,7 +38,7 @@ fi
 echo "✅ Base D1 créée: $DATABASE_ID"
 
 # 2. Copier TOUS les fichiers optimisés
-echo "📁 Copie de la boutique CALITEK optimisée..."
+echo "📁 Copie de la boutique DELIS FOOD MARKET optimisée..."
 mkdir -p "../$BOUTIQUE_NAME"
 cp -r src/ "../$BOUTIQUE_NAME/"
 cp -r public/ "../$BOUTIQUE_NAME/"
@@ -121,7 +121,7 @@ echo "🚀 Initialisation base D1 pour $BOUTIQUE_NAME..."
 
 # Créer toutes les tables avec colonnes optimisées
 curl -s -X POST "\$BASE_URL" -H "Authorization: Bearer \$API_TOKEN" -H "Content-Type: application/json" -d '{
-  "sql": "CREATE TABLE IF NOT EXISTS settings (id INTEGER PRIMARY KEY AUTOINCREMENT, shop_name TEXT DEFAULT \"CALITEK\", admin_password TEXT DEFAULT \"admin123\", background_image TEXT DEFAULT \"https://i.imgur.com/s1rsguc.jpeg\", background_opacity INTEGER DEFAULT 20, background_blur INTEGER DEFAULT 5, theme_color TEXT DEFAULT \"glow\", contact_info TEXT DEFAULT \"\", shop_description TEXT DEFAULT \"\", loading_enabled BOOLEAN DEFAULT true, loading_duration INTEGER DEFAULT 3000, whatsapp_link TEXT DEFAULT \"\", whatsapp_number TEXT DEFAULT \"\", scrolling_text TEXT DEFAULT \"\", created_at DATETIME DEFAULT CURRENT_TIMESTAMP, updated_at DATETIME DEFAULT CURRENT_TIMESTAMP);"
+  "sql": "CREATE TABLE IF NOT EXISTS settings (id INTEGER PRIMARY KEY AUTOINCREMENT, shop_name TEXT DEFAULT \"DELIS FOOD MARKET\", admin_password TEXT DEFAULT \"admin123\", background_image TEXT DEFAULT \"https://i.imgur.com/s1rsguc.jpeg\", background_opacity INTEGER DEFAULT 20, background_blur INTEGER DEFAULT 5, theme_color TEXT DEFAULT \"glow\", contact_info TEXT DEFAULT \"\", shop_description TEXT DEFAULT \"\", loading_enabled BOOLEAN DEFAULT true, loading_duration INTEGER DEFAULT 3000, whatsapp_link TEXT DEFAULT \"\", whatsapp_number TEXT DEFAULT \"\", scrolling_text TEXT DEFAULT \"\", created_at DATETIME DEFAULT CURRENT_TIMESTAMP, updated_at DATETIME DEFAULT CURRENT_TIMESTAMP);"
 }' > /dev/null
 
 curl -s -X POST "\$BASE_URL" -H "Authorization: Bearer \$API_TOKEN" -H "Content-Type: application/json" -d '{
@@ -144,17 +144,17 @@ curl -s -X POST "\$BASE_URL" -H "Authorization: Bearer \$API_TOKEN" -H "Content-
   "sql": "CREATE TABLE IF NOT EXISTS social_links (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, url TEXT NOT NULL, icon TEXT DEFAULT \"🔗\", is_active BOOLEAN DEFAULT true, sort_order INTEGER DEFAULT 0, created_at DATETIME DEFAULT CURRENT_TIMESTAMP, updated_at DATETIME DEFAULT CURRENT_TIMESTAMP);"
 }' > /dev/null
 
-# Insérer settings par défaut avec logo CALITEK
+# Insérer settings par défaut avec logo DELIS FOOD MARKET
 curl -s -X POST "\$BASE_URL" -H "Authorization: Bearer \$API_TOKEN" -H "Content-Type: application/json" -d '{
-  "sql": "INSERT INTO settings (id, shop_name, background_image) VALUES (1, \"CALITEK\", \"https://i.imgur.com/s1rsguc.jpeg\");"
+  "sql": "INSERT INTO settings (id, shop_name, background_image) VALUES (1, \"DELIS FOOD MARKET\", \"https://i.imgur.com/s1rsguc.jpeg\");"
 }' > /dev/null
 
 # Pages par défaut
 curl -s -X POST "\$BASE_URL" -H "Authorization: Bearer \$API_TOKEN" -H "Content-Type: application/json" -d '{
-  "sql": "INSERT INTO pages (slug, title, content) VALUES (\"info\", \"Informations\", \"Bienvenue chez CALITEK !\"), (\"contact\", \"Contact\", \"Contactez-nous pour toute question.\");"
+  "sql": "INSERT INTO pages (slug, title, content) VALUES (\"info\", \"Informations\", \"Bienvenue chez DELIS FOOD MARKET !\"), (\"contact\", \"Contact\", \"Contactez-nous pour toute question.\");"
 }' > /dev/null
 
-echo "🎉 Base D1 initialisée avec logo CALITEK !"
+echo "🎉 Base D1 initialisée avec logo DELIS FOOD MARKET !"
 EOF
 
 chmod +x "../$BOUTIQUE_NAME/init-d1-custom.sh"
@@ -164,13 +164,13 @@ echo "📝 Initialisation Git..."
 cd "../$BOUTIQUE_NAME"
 git init
 git add .
-git commit -m "🚀 Boutique CALITEK Optimisée - Base D1 Neuve
+git commit -m "🚀 Boutique DELIS FOOD MARKET Optimisée - Base D1 Neuve
 
 ✅ Version complète avec toutes les optimisations :
-- 79 produits types CALITEK
+- 79 produits types DELIS FOOD MARKET
 - 17 catégories spécialisées  
 - 11 farms configurées
-- Logo CALITEK : https://i.imgur.com/s1rsguc.jpeg
+- Logo DELIS FOOD MARKET : https://i.imgur.com/s1rsguc.jpeg
 - Interface épurée sans bugs
 - Synchronisation temps réel
 - Support images/vidéos R2
@@ -179,7 +179,7 @@ git commit -m "🚀 Boutique CALITEK Optimisée - Base D1 Neuve
 🎯 Prêt pour déploiement Vercel !"
 
 echo ""
-echo "🎉 DUPLICATION CALITEK TERMINÉE !"
+echo "🎉 DUPLICATION DELIS FOOD MARKET TERMINÉE !"
 echo ""
 echo "📋 PROCHAINES ÉTAPES :"
 echo "1. Créez un nouveau repository GitHub"
@@ -190,5 +190,5 @@ echo ""
 echo "   CLOUDFLARE_DATABASE_ID=$DATABASE_ID"
 echo "   (Toutes les autres variables identiques)"
 echo ""
-echo "🎯 Votre nouvelle boutique CALITEK sera identique avec base propre !"
-echo "💡 Logo CALITEK déjà configuré : https://i.imgur.com/s1rsguc.jpeg"
+echo "🎯 Votre nouvelle boutique DELIS FOOD MARKET sera identique avec base propre !"
+echo "💡 Logo DELIS FOOD MARKET déjà configuré : https://i.imgur.com/s1rsguc.jpeg"

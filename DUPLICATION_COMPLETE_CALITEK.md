@@ -1,4 +1,4 @@
-# 🚀 DUPLICATION COMPLÈTE - Boutique CALITEK Optimisée
+# 🚀 DUPLICATION COMPLÈTE - Boutique DELIS FOOD MARKET Optimisée
 
 Ce guide vous permet de dupliquer cette boutique avec TOUTES les optimisations et corrections déjà appliquées.
 
@@ -25,8 +25,8 @@ Ce guide vous permet de dupliquer cette boutique avec TOUTES les optimisations e
 - ✅ **Synchronisation temps réel** admin ↔ boutique
 - ✅ **Gestion complète** : produits, catégories, farms, pages, réseaux sociaux
 
-### **🎨 Design CALITEK :**
-- ✅ **Nom CALITEK** partout (plus FULL OPTION IDF)
+### **🎨 Design DELIS FOOD MARKET :**
+- ✅ **Nom DELIS FOOD MARKET** partout (plus FULL OPTION IDF)
 - ✅ **Logo uniforme** : https://i.imgur.com/s1rsguc.jpeg
 - ✅ **Menu épuré** : Logo + panier + texte défilant optionnel
 - ✅ **Chargement instantané** sans anciens contenus
@@ -103,7 +103,7 @@ Cette version contient déjà :
 - **79 produits** : Tropicburger 🔥, hashburger S1 🔥, Forbidden Fruit 🔥, etc.
 - **17 catégories** : King Frozen 👑🥶, 120u Premium Seed 🍀, etc.
 - **11 farms** : Sasuke Farm 🥷, Yellow Hash 🆕🔥, etc.
-- **Logo CALITEK** : https://i.imgur.com/s1rsguc.jpeg
+- **Logo DELIS FOOD MARKET** : https://i.imgur.com/s1rsguc.jpeg
 - **Configuration optimisée** : Tous les bugs corrigés
 
 ## 🎯 **AVANTAGES DE CETTE VERSION**
@@ -142,7 +142,7 @@ Avec cette architecture :
 
 ## 🎉 **RÉSULTAT**
 
-Vous obtiendrez une boutique **identique à CALITEK** avec :
+Vous obtiendrez une boutique **identique à DELIS FOOD MARKET** avec :
 - **Même design** et fonctionnalités
 - **Même performance** Cloudflare
 - **Base de données indépendante**

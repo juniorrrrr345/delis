@@ -353,7 +353,7 @@ https://ma-boutique-2.vercel.app/
 ## 🎉 **RÉSULTAT GARANTI**
 
 Avec ce guide, vous obtiendrez :
-- ✅ **Boutique identique** à CALITEK
+- ✅ **Boutique identique** à DELIS FOOD MARKET
 - ✅ **Aucune erreur** 500/405/401
 - ✅ **Performance optimale** Cloudflare
 - ✅ **Interface épurée** sans bugs

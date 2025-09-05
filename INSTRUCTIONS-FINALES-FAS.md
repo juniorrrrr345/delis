@@ -81,7 +81,7 @@ NODE_ENV=production
 - ✅ **Titre :** "FAS - Boutique en ligne"
 - ✅ **Chargement :** "FAS INDUSTRY"
 - ✅ **Admin :** "FAS Panel d'Administration"
-- ✅ **Plus aucune trace de CALITEK**
+- ✅ **Plus aucune trace de DELIS FOOD MARKET**
 
 ---
 

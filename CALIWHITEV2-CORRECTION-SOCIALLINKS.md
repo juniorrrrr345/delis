@@ -1,4 +1,4 @@
-# 🔧 CALIWHITEV2 - CORRECTION SOCIALLINKSMANAGER APPLIQUÉE
+# 🔧 DELIS FOOD MARKETV2 - CORRECTION SOCIALLINKSMANAGER APPLIQUÉE
 
 ## ✅ PROBLÈME RÉSOLU
 
@@ -37,7 +37,7 @@ body: JSON.stringify({
 ✅ **Messages succès** fonctionnels  
 ✅ **Build** : 37/37 pages ✅  
 
-## 📋 TOUTES LES CORRECTIONS CALIWHITEV2
+## 📋 TOUTES LES CORRECTIONS DELIS FOOD MARKETV2
 
 ### 1. ✅ API Products - Catégories/Farms
 - Suppression `&& !category_id` et `&& !farm_id`
@@ -55,15 +55,15 @@ body: JSON.stringify({
 - Intervalle 60000ms au lieu de 2000ms
 - **Résultat** : Performance améliorée
 
-### 5. ✅ Références CALITEK supprimées
-- 57 références CALIWHITE dans 14 fichiers
-- **Résultat** : Plus de "CALITEK" affiché
+### 5. ✅ Références DELIS FOOD MARKET supprimées
+- 57 références DELIS FOOD MARKET dans 14 fichiers
+- **Résultat** : Plus de "DELIS FOOD MARKET" affiché
 
 ## 🌐 VARIABLES VERCEL
 
 ```env
 CLOUDFLARE_ACCOUNT_ID=7979421604bd07b3bd34d3ed96222512
-CLOUDFLARE_DATABASE_ID=19ee81cc-91c0-4cfc-8cbe-dc67d8675e37
+CLOUDFLARE_DATABASE_ID=b52bc539-a06c-4c32-9569-0ea917199a6b
 CLOUDFLARE_API_TOKEN=ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW
 CLOUDFLARE_R2_ACCESS_KEY_ID=82WsPNjX-j0UqZIGAny8b0uEehcHd0X3zMKNIKIN
 CLOUDFLARE_R2_SECRET_ACCESS_KEY=28230e200a3b71e5374e569f8a297eba9aa3fe2e1097fdf26e5d9e340ded709d
@@ -74,7 +74,7 @@ ADMIN_PASSWORD=votre_nouveau_mot_de_passe
 
 ## 🚀 DÉPLOIEMENT
 
-**Repository GitHub** : https://github.com/juniorrrrr345/CALIWHITEV2.git
+**Repository GitHub** : https://github.com/juniorrrrr345/DELIS FOOD MARKETV2.git
 
 ### Accès Admin
 - **URL** : `/admin`
@@ -92,6 +92,6 @@ ADMIN_PASSWORD=votre_nouveau_mot_de_passe
 
 ---
 
-**🎉 CALIWHITEV2 AVEC CORRECTION SOCIALLINKSMANAGER DÉPLOYÉ !**
+**🎉 DELIS FOOD MARKETV2 AVEC CORRECTION SOCIALLINKSMANAGER DÉPLOYÉ !**
 
 *Toutes les corrections critiques appliquées et testées*

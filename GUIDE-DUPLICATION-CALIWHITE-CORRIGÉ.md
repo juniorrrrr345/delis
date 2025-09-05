@@ -1,4 +1,4 @@
-# 📋 GUIDE DUPLICATION BOUTIQUE CLOUDFLARE - VERSION CALIWHITE CORRIGÉE
+# 📋 GUIDE DUPLICATION BOUTIQUE CLOUDFLARE - VERSION DELIS FOOD MARKET CORRIGÉE
 
 ## 📋 DONNÉES À FOURNIR AVANT DE COMMENCER
 
@@ -6,7 +6,7 @@ Vous devez avoir :
 
 - Votre MongoDB URI : `mongodb+srv://genesistvl777:BtHiS2lycR1iNTKN@genesistvl77.62ytsmy.mongodb.net/?retryWrites=true&w=majority&appName=genesistvl77`
 - Nom de votre database MongoDB : `test`
-- Nom de votre nouvelle boutique : **CALIWHITE**
+- Nom de votre nouvelle boutique : **DELIS FOOD MARKET**
 - Votre Cloudflare Account ID : `7979421604bd07b3bd34d3ed96222512`
 - Votre Cloudflare API Token : `ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW`
 - Nom de votre bucket R2 : `boutique-images`
@@ -18,15 +18,15 @@ Vous devez avoir :
 curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database" \
   -H "Authorization: Bearer ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW" \
   -H "Content-Type: application/json" \
-  --data '{"name": "CALIWHITE"}'
+  --data '{"name": "DELIS FOOD MARKET"}'
 ```
-⚠️ **IMPORTANT** : Notez l'UUID généré : `19ee81cc-91c0-4cfc-8cbe-dc67d8675e37`
+⚠️ **IMPORTANT** : Notez l'UUID généré : `b52bc539-a06c-4c32-9569-0ea917199a6b`
 
 ### 1.2 Créer le schéma D1 sans bugs
 
 **Table categories**
 ```bash
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/19ee81cc-91c0-4cfc-8cbe-dc67d8675e37/query" \
+curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/b52bc539-a06c-4c32-9569-0ea917199a6b/query" \
   -H "Authorization: Bearer ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW" \
   -H "Content-Type: application/json" \
   --data '{"sql": "CREATE TABLE categories (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, icon TEXT, color TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)"}'
@@ -34,7 +34,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34
 
 **Table farms**
 ```bash
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/19ee81cc-91c0-4cfc-8cbe-dc67d8675e37/query" \
+curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/b52bc539-a06c-4c32-9569-0ea917199a6b/query" \
   -H "Authorization: Bearer ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW" \
   -H "Content-Type: application/json" \
   --data '{"sql": "CREATE TABLE farms (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, description TEXT, location TEXT, contact TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)"}'
@@ -42,7 +42,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34
 
 **Table social_links**
 ```bash
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/19ee81cc-91c0-4cfc-8cbe-dc67d8675e37/query" \
+curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/b52bc539-a06c-4c32-9569-0ea917199a6b/query" \
   -H "Authorization: Bearer ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW" \
   -H "Content-Type: application/json" \
   --data '{"sql": "CREATE TABLE social_links (id INTEGER PRIMARY KEY AUTOINCREMENT, platform TEXT NOT NULL, url TEXT NOT NULL, icon TEXT, is_available BOOLEAN DEFAULT 1, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)"}'
@@ -50,7 +50,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34
 
 **Table products**
 ```bash
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/19ee81cc-91c0-4cfc-8cbe-dc67d8675e37/query" \
+curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/b52bc539-a06c-4c32-9569-0ea917199a6b/query" \
   -H "Authorization: Bearer ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW" \
   -H "Content-Type: application/json" \
   --data '{"sql": "CREATE TABLE products (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, description TEXT, category_id INTEGER, farm_id INTEGER, image_url TEXT, video_url TEXT, prices TEXT, price REAL, stock INTEGER DEFAULT 0, is_available BOOLEAN DEFAULT 1, features TEXT, tags TEXT, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)"}'
@@ -58,7 +58,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34
 
 **Table settings**
 ```bash
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/19ee81cc-91c0-4cfc-8cbe-dc67d8675e37/query" \
+curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/b52bc539-a06c-4c32-9569-0ea917199a6b/query" \
   -H "Authorization: Bearer ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW" \
   -H "Content-Type: application/json" \
   --data '{"sql": "CREATE TABLE settings (id INTEGER PRIMARY KEY, background_image TEXT, background_opacity INTEGER DEFAULT 20, background_blur INTEGER DEFAULT 5, info_content TEXT, contact_content TEXT, shop_title TEXT, whatsapp_link TEXT, whatsapp_number TEXT, scrolling_text TEXT, theme_color TEXT DEFAULT \"glow\", created_at DATETIME DEFAULT CURRENT_TIMESTAMP)"}'
@@ -66,7 +66,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34
 
 **Table pages**
 ```bash
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/19ee81cc-91c0-4cfc-8cbe-dc67d8675e37/query" \
+curl -X POST "https://api.cloudflare.com/client/v4/accounts/7979421604bd07b3bd34d3ed96222512/d1/database/b52bc539-a06c-4c32-9569-0ea917199a6b/query" \
   -H "Authorization: Bearer ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW" \
   -H "Content-Type: application/json" \
   --data '{"sql": "CREATE TABLE pages (id INTEGER PRIMARY KEY AUTOINCREMENT, slug TEXT UNIQUE NOT NULL, title TEXT NOT NULL, content TEXT, is_active BOOLEAN DEFAULT 1, created_at DATETIME DEFAULT CURRENT_TIMESTAMP)"}'
@@ -86,7 +86,7 @@ npm install
 ```typescript
 export const CLOUDFLARE_CONFIG = {
   accountId: '7979421604bd07b3bd34d3ed96222512',
-  databaseId: '19ee81cc-91c0-4cfc-8cbe-dc67d8675e37',
+  databaseId: 'b52bc539-a06c-4c32-9569-0ea917199a6b',
   apiToken: 'ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW'
 };
 ```
@@ -107,16 +107,16 @@ const r2Client = new CloudflareR2Client({
 ### 2.4 Remplacer les credentials partout
 ```bash
 # Remplacer UUID D1
-find ./src -type f -name "*.ts" -o -name "*.tsx" | xargs sed -i 's/c2f265db-7c5d-4f33-a5dd-f84c602a013d/19ee81cc-91c0-4cfc-8cbe-dc67d8675e37/g'
+find ./src -type f -name "*.ts" -o -name "*.tsx" | xargs sed -i 's/c2f265db-7c5d-4f33-a5dd-f84c602a013d/b52bc539-a06c-4c32-9569-0ea917199a6b/g'
 
 # Remplacer nom boutique
-find ./src -type f -name "*.tsx" -o -name "*.ts" | xargs sed -i 's/MEXICAIN/CALIWHITE/g'
+find ./src -type f -name "*.tsx" -o -name "*.ts" | xargs sed -i 's/MEXICAIN/DELIS FOOD MARKET/g'
 
-# ⚠️ CORRECTION CRITIQUE : CALITEK → CALIWHITE
-find ./src -type f -name "*.tsx" -o -name "*.ts" | xargs sed -i 's/CALITEK/CALIWHITE/g'
+# ⚠️ CORRECTION CRITIQUE : DELIS FOOD MARKET → DELIS FOOD MARKET
+find ./src -type f -name "*.tsx" -o -name "*.ts" | xargs sed -i 's/DELIS FOOD MARKET/DELIS FOOD MARKET/g'
 
-# Corriger les références REINA → CALIWHITE
-find ./src -type f -name "*.tsx" -o -name "*.ts" | xargs sed -i 's/REINA/CALIWHITE/g'
+# Corriger les références DELIS FOOD MARKET → DELIS FOOD MARKET
+find ./src -type f -name "*.tsx" -o -name "*.ts" | xargs sed -i 's/DELIS FOOD MARKET/DELIS FOOD MARKET/g'
 ```
 
 ## 📦 ÉTAPE 3 : MIGRATION DONNÉES SANS DOUBLONS
@@ -126,13 +126,13 @@ find ./src -type f -name "*.tsx" -o -name "*.ts" | xargs sed -i 's/REINA/CALIWHI
 ```javascript
 const { MongoClient } = require('mongodb');
 
-// DONNÉES CALIWHITE
+// DONNÉES DELIS FOOD MARKET
 const MONGODB_URI = 'mongodb+srv://genesistvl777:BtHiS2lycR1iNTKN@genesistvl77.62ytsmy.mongodb.net/?retryWrites=true&w=majority&appName=genesistvl77';
 const MONGODB_DB_NAME = 'test'; // Base confirmée avec données
 
 const CLOUDFLARE_CONFIG = {
   accountId: '7979421604bd07b3bd34d3ed96222512',
-  databaseId: '19ee81cc-91c0-4cfc-8cbe-dc67d8675e37',
+  databaseId: 'b52bc539-a06c-4c32-9569-0ea917199a6b',
   apiToken: 'ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW'
 };
 
@@ -188,7 +188,7 @@ async function migrateCleanData() {
     for (const farm of uniqueFarms) {
       await executeSqlOnD1(
         'INSERT INTO farms (name, description, location, contact) VALUES (?, ?, ?, ?)',
-        [farm.name || 'Farm', 'Production CALIWHITE', farm.location || farm.country || 'Local', 'contact@caliwhite.com']
+        [farm.name || 'Farm', 'Production DELIS FOOD MARKET', farm.location || farm.country || 'Local', 'contact@caliwhite.com']
       );
     }
     console.log(`✅ ${uniqueFarms.length} farms uniques migrées`);
@@ -223,7 +223,7 @@ async function migrateCleanData() {
         'INSERT INTO products (name, description, category_id, farm_id, image_url, video_url, price, stock, prices, is_available) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
         [
           product.name || 'Produit',
-          product.description || 'Produit CALIWHITE de qualité',
+          product.description || 'Produit DELIS FOOD MARKET de qualité',
           category_id,
           farm_id,
           product.image || '',
@@ -240,9 +240,9 @@ async function migrateCleanData() {
     // Migration settings
     await executeSqlOnD1(
       'INSERT INTO settings (id, shop_title, theme_color, background_opacity, background_blur) VALUES (?, ?, ?, ?, ?)',
-      [1, 'CALIWHITE', 'glow', 20, 5]
+      [1, 'DELIS FOOD MARKET', 'glow', 20, 5]
     );
-    console.log('✅ Settings CALIWHITE configurés');
+    console.log('✅ Settings DELIS FOOD MARKET configurés');
     
     console.log('✅ Migration MongoDB → D1 PROPRE terminée');
     
@@ -277,7 +277,7 @@ node migrate-media-to-r2-caliwhite.js
 ### 5.1 Mise à jour package.json
 ```json
 {
-  "name": "CALIWHITE",
+  "name": "DELIS FOOD MARKET",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -291,9 +291,9 @@ node migrate-media-to-r2-caliwhite.js
 
 ### 5.2 Configuration .env.example
 ```env
-# Cloudflare D1 Database (NOUVELLE BASE PROPRE CALIWHITE)
+# Cloudflare D1 Database (NOUVELLE BASE PROPRE DELIS FOOD MARKET)
 CLOUDFLARE_ACCOUNT_ID=7979421604bd07b3bd34d3ed96222512
-CLOUDFLARE_DATABASE_ID=19ee81cc-91c0-4cfc-8cbe-dc67d8675e37
+CLOUDFLARE_DATABASE_ID=b52bc539-a06c-4c32-9569-0ea917199a6b
 CLOUDFLARE_API_TOKEN=ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW
 
 # Cloudflare R2 Storage (MÉDIAS MIGRÉS)
@@ -460,27 +460,27 @@ const interval = setInterval(() => {
 {settings.backgroundImage ? (
   <img 
     src={settings.backgroundImage} 
-    alt="CALIWHITE" 
+    alt="DELIS FOOD MARKET" 
     className="h-12 sm:h-16 md:h-20 w-auto rounded-lg"
     style={{ filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))' }}
   />
 ) : (
   <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
-    CALIWHITE
+    DELIS FOOD MARKET
   </h1>
 )}
 ```
 
 **⚠️ IMPORTANT** : 
 - **Avec logo uploadé** → Affiche l'image (pas de texte)
-- **Sans logo** → Affiche "CALIWHITE" en fallback
-- **Plus jamais "CALITEK"** → Tout est CALIWHITE
+- **Sans logo** → Affiche "DELIS FOOD MARKET" en fallback
+- **Plus jamais "DELIS FOOD MARKET"** → Tout est DELIS FOOD MARKET
 
 ## 🚀 ÉTAPE 10 : VARIABLES VERCEL (COMPLÈTES)
 
 ```env
 CLOUDFLARE_ACCOUNT_ID=7979421604bd07b3bd34d3ed96222512
-CLOUDFLARE_DATABASE_ID=19ee81cc-91c0-4cfc-8cbe-dc67d8675e37
+CLOUDFLARE_DATABASE_ID=b52bc539-a06c-4c32-9569-0ea917199a6b
 CLOUDFLARE_API_TOKEN=ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW
 CLOUDFLARE_R2_ACCESS_KEY_ID=82WsPNjX-j0UqZIGAny8b0uEehcHd0X3zMKNIKIN
 CLOUDFLARE_R2_SECRET_ACCESS_KEY=28230e200a3b71e5374e569f8a297eba9aa3fe2e1097fdf26e5d9e340ded709d
@@ -500,8 +500,8 @@ npm run dev
 ### 11.2 GitHub et Vercel
 ```bash
 git add .
-git commit -m "🚀 CALIWHITE - Boutique 100% opérationnelle avec corrections critiques"
-git remote add origin https://github.com/juniorrrrr345/CALIWHITEV2.git
+git commit -m "🚀 DELIS FOOD MARKET - Boutique 100% opérationnelle avec corrections critiques"
+git remote add origin https://github.com/juniorrrrr345/DELIS FOOD MARKETV2.git
 git push -u origin main
 ```
 
@@ -510,7 +510,7 @@ git push -u origin main
 2. Ajouter les variables d'environnement (optionnel - hardcodées)
 3. Deploy - Build garanti ✅
 
-## 🎯 FONCTIONNALITÉS CONFIRMÉES CALIWHITE
+## 🎯 FONCTIONNALITÉS CONFIRMÉES DELIS FOOD MARKET
 
 ✅ **Panel Admin `/admin`** - Messages "Sauvegardé avec succès" (corrigé)  
 ✅ **Upload médias** - Images/vidéos vers R2 (100% fonctionnel)  
@@ -518,11 +518,11 @@ git push -u origin main
 ✅ **Affichage client** - Images/vidéos R2 sans erreurs  
 ✅ **Build Vercel** - 37/37 pages validées  
 ✅ **Base propre** - Migration sans doublons  
-✅ **Logo système** - Background image OU texte CALIWHITE  
+✅ **Logo système** - Background image OU texte DELIS FOOD MARKET  
 ✅ **Catégories/Farms** - S'affichent immédiatement (corrigé)  
 ✅ **Rechargement** - 1 minute au lieu de 2 secondes  
 
-## 🔧 CORRECTIONS SPÉCIFIQUES CALIWHITE APPLIQUÉES
+## 🔧 CORRECTIONS SPÉCIFIQUES DELIS FOOD MARKET APPLIQUÉES
 
 ### Messages Panel Admin ✅
 ✅ Bouton "Sauvegarder" avec état correct  
@@ -540,7 +540,7 @@ git push -u origin main
 ✅ Schéma optimisé sans colonnes problématiques  
 ✅ Migration MongoDB → D1 sans doublons  
 ✅ Credentials hardcodés (évite erreurs Vercel)  
-✅ UUID propre : `19ee81cc-91c0-4cfc-8cbe-dc67d8675e37`  
+✅ UUID propre : `b52bc539-a06c-4c32-9569-0ea917199a6b`  
 
 ### Médias R2 Migrés ✅
 ✅ Images Cloudinary → R2 migrées  
@@ -548,8 +548,8 @@ git push -u origin main
 ✅ Panel admin affiche URLs R2 directement  
 
 ### Nom Boutique Corrigé ✅
-✅ **Plus aucune référence CALITEK**  
-✅ **CALIWHITE partout** (57 occurrences dans 14 fichiers)  
+✅ **Plus aucune référence DELIS FOOD MARKET**  
+✅ **DELIS FOOD MARKET partout** (57 occurrences dans 14 fichiers)  
 ✅ Métadonnées mises à jour  
 ✅ **Logo de fond de thème** fonctionnel  
 
@@ -559,10 +559,10 @@ git push -u origin main
 ✅ **Synchronisation immédiate** - Catégories/farms s'affichent instantanément  
 ✅ **Rechargement optimisé** - 1 minute au lieu de 2 secondes  
 
-## 🎉 DUPLICATION CALIWHITE GARANTIE SANS BUGS !
+## 🎉 DUPLICATION DELIS FOOD MARKET GARANTIE SANS BUGS !
 
 ### 📊 DONNÉES FINALES
-- **Base D1** : CALIWHITE (UUID: `19ee81cc-91c0-4cfc-8cbe-dc67d8675e37`)
+- **Base D1** : DELIS FOOD MARKET (UUID: `b52bc539-a06c-4c32-9569-0ea917199a6b`)
 - **MongoDB source** : `test` database 
 - **Médias** : 100% sur R2 Cloudflare
 - **Build** : 37/37 pages ✅
@@ -570,7 +570,7 @@ git push -u origin main
 - **API Products** : Catégories/farms corrigées ✅
 
 ### 🚀 RÉSULTAT FINAL
-Cette version CALIWHITE a été testée et corrigée avec **TOUTES LES CORRECTIONS CRITIQUES** :
+Cette version DELIS FOOD MARKET a été testée et corrigée avec **TOUTES LES CORRECTIONS CRITIQUES** :
 
 ✅ **Base D1 propre** sans doublons  
 ✅ **Médias 100% sur R2** Cloudflare  
@@ -578,18 +578,18 @@ Cette version CALIWHITE a été testée et corrigée avec **TOUTES LES CORRECTIO
 ✅ **Messages de succès** corrects  
 ✅ **Build Vercel garanti** 37/37 pages  
 ✅ **Logo système** background image fonctionnel  
-✅ **Plus de références CALITEK** → Tout CALIWHITE  
+✅ **Plus de références DELIS FOOD MARKET** → Tout DELIS FOOD MARKET  
 ✅ **API Products corrigée** → Catégories/farms immédiates  
 ✅ **Rechargement optimisé** → Performance améliorée  
 
-**Repository GitHub** : https://github.com/juniorrrrr345/CALIWHITEV2.git
+**Repository GitHub** : https://github.com/juniorrrrr345/DELIS FOOD MARKETV2.git
 
 ## 🎯 RÉSULTAT AVEC CORRECTIONS UNIVERSELLES
 
-Avec ces corrections, CALIWHITE aura :
+Avec ces corrections, DELIS FOOD MARKET aura :
 ✅ **Catégories/farms** s'affichent immédiatement après modification  
 ✅ **Panel admin** ne recharge plus toutes les 2 secondes  
 ✅ **Formulaire** garde vos sélections  
 ✅ **Synchronisation** fonctionne parfaitement  
 
-**🎉 CALIWHITE AVEC TOUTES LES CORRECTIONS CRITIQUES PRÊT POUR DÉPLOIEMENT VERCEL IMMÉDIAT !**
+**🎉 DELIS FOOD MARKET AVEC TOUTES LES CORRECTIONS CRITIQUES PRÊT POUR DÉPLOIEMENT VERCEL IMMÉDIAT !**

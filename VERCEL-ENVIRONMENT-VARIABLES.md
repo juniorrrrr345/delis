@@ -1,4 +1,4 @@
-# 🌐 VARIABLES D'ENVIRONNEMENT VERCEL - CALIWHITE
+# 🌐 VARIABLES D'ENVIRONNEMENT VERCEL - DELIS FOOD MARKET
 
 ## 📋 VARIABLES COMPLÈTES POUR VERCEL
 
@@ -7,7 +7,7 @@ Copiez-collez ces variables dans Vercel lors du déploiement :
 ### Cloudflare D1 Database
 ```
 CLOUDFLARE_ACCOUNT_ID=7979421604bd07b3bd34d3ed96222512
-CLOUDFLARE_DATABASE_ID=19ee81cc-91c0-4cfc-8cbe-dc67d8675e37
+CLOUDFLARE_DATABASE_ID=b52bc539-a06c-4c32-9569-0ea917199a6b
 CLOUDFLARE_API_TOKEN=ijkVhaXCw6LSddIMIMxwPL5CDAWznxip5x9I1bNW
 ```
 
@@ -49,7 +49,7 @@ const r2Client = new CloudflareR2Client({
 
 ## 🚀 DÉPLOIEMENT VERCEL
 
-1. **Import** : `https://github.com/juniorrrrr345/CALIWHITEV2.git`
+1. **Import** : `https://github.com/juniorrrrr345/DELIS FOOD MARKETV2.git`
 2. **Variables** : Ajouter les variables ci-dessus (optionnel car hardcodées)
 3. **Deploy** : Build automatique garanti ✅
 

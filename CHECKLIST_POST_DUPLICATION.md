@@ -106,7 +106,7 @@ curl -X POST "https://votre-boutique.vercel.app/api/cloudflare/categories" \
 ```bash
 https://votre-boutique.vercel.app/admin
 
-# 1. Page login s'affiche : "PANEL ADMIN - CALITEK"
+# 1. Page login s'affiche : "PANEL ADMIN - DELIS FOOD MARKET"
 # 2. Connexion avec ADMIN_PASSWORD
 # 3. Dashboard admin s'affiche avec menus
 ```
@@ -128,7 +128,7 @@ https://votre-boutique.vercel.app/admin
 https://votre-boutique.vercel.app/
 
 # Vérifications :
-- Logo CALITEK affiché (https://i.imgur.com/s1rsguc.jpeg)
+- Logo DELIS FOOD MARKET affiché (https://i.imgur.com/s1rsguc.jpeg)
 - Produits listés (vides au début, normal)
 - Filtres catégories/farms fonctionnels
 - Panier accessible
@@ -182,7 +182,7 @@ BOUTIQUE_URL="https://votre-boutique.vercel.app"
 echo "🧪 Test de la boutique dupliquée..."
 
 # Test 1 : Page principale
-curl -s "$BOUTIQUE_URL/" | grep -q "CALITEK" && echo "✅ Page principale OK" || echo "❌ Page principale KO"
+curl -s "$BOUTIQUE_URL/" | grep -q "DELIS FOOD MARKET" && echo "✅ Page principale OK" || echo "❌ Page principale KO"
 
 # Test 2 : API debug
 curl -s "$BOUTIQUE_URL/api/debug-all" | grep -q '"success":true' && echo "✅ API debug OK" || echo "❌ API debug KO"
@@ -191,7 +191,7 @@ curl -s "$BOUTIQUE_URL/api/debug-all" | grep -q '"success":true' && echo "✅ AP
 curl -s "$BOUTIQUE_URL/api/test-r2" | grep -q '"success":true' && echo "✅ R2 OK" || echo "❌ R2 KO"
 
 # Test 4 : Admin
-curl -s "$BOUTIQUE_URL/admin" | grep -q "CALITEK" && echo "✅ Admin OK" || echo "❌ Admin KO"
+curl -s "$BOUTIQUE_URL/admin" | grep -q "DELIS FOOD MARKET" && echo "✅ Admin OK" || echo "❌ Admin KO"
 
 echo "🎯 Tests terminés !"
 ```
@@ -202,4 +202,4 @@ echo "🎯 Tests terminés !"
 
 Avec ce guide, votre duplication sera **100% fonctionnelle** sans erreurs 500 !
 
-**🚀 Boutique identique à CALITEK en 10 minutes !**
+**🚀 Boutique identique à DELIS FOOD MARKET en 10 minutes !**
